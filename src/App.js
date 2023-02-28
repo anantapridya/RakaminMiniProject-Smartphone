@@ -1,9 +1,11 @@
+import Navbar from './components/Navbar';
 import logo from './logo.svg';
+import Dashboard from './Pages/Dashboard';
 
 function App() {
   return (
     <div>
-      <p className='font-bold text-3xl text-red-700'>TEST</p>
+      < Dashboard />
     </div>
   );
 }
