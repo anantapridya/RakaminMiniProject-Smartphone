@@ -5,6 +5,7 @@ import Carousel from "../components/Carousel";
 import hp from "../assets/smartphone.png";
 import laptop from "../assets/laptop.png";
 import arloji from "../assets/arloji.png"
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
   const [product, setProduct] = useState([
@@ -15,7 +16,7 @@ export default function Dashboard() {
       images: [],
     },
   ]);
-  const [map, setmap] = useState(null);
+//   const [map, setmap] = useState(null);
   const url = "https://dummyjson.com/products?limit=0";
   const options = {
     method: "GET",
@@ -87,6 +88,9 @@ export default function Dashboard() {
                     <span>$</span>
                     {item.price}
                   </p>
+                  <a href={`/product/${item.id}`} className="bg-blue-600 w-full text-center rounded-[6px] py-[5px] font-bold text-white">
+                    Detail
+                  </a>
                 </div>
               );
             }
